@@ -2,6 +2,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Url;
+use cinghie\cookieconsent\widgets\CookieWidget;
 
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
@@ -55,3 +56,11 @@ $fieldOptions2 = [
     </div>
     <!-- /.login-box-body -->
 </div><!-- /.login-box -->
+
+<?= CookieWidget::widget([
+    'message' => 'This website uses cookies to ensure you get the best experience on our website.',
+    'dismiss' => 'Got It',
+    'learnMore' => 'More info',
+    'link' => 'http://silktide.com/privacy-policy',
+    'theme' => 'dark-bottom'
+]); ?>

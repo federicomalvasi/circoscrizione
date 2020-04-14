@@ -23,7 +23,9 @@
         "kartik-v/yii2-grid": "@dev",
         "nemmo/yii2-attachments": "@dev",
         "2amigos/yii2-tinymce-widget": "~1.1",
-        "kartik-v/yii2-mpdf": "dev-master"
+        "kartik-v/yii2-mpdf": "dev-master",
+        "kartik-v/yii2-datecontrol": "@dev",
+        "cinghie/yii2-cookie-consent": "^1.5.1"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

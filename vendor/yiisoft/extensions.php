@@ -156,4 +156,22 @@ return array (
       '@kartik/mpdf' => $vendorDir . '/kartik-v/yii2-mpdf/src',
     ),
   ),
+  'kartik-v/yii2-datecontrol' => 
+  array (
+    'name' => 'kartik-v/yii2-datecontrol',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@kartik/datecontrol' => $vendorDir . '/kartik-v/yii2-datecontrol/src',
+    ),
+  ),
+  'cinghie/yii2-cookie-consent' => 
+  array (
+    'name' => 'cinghie/yii2-cookie-consent',
+    'version' => '1.5.1.0',
+    'alias' => 
+    array (
+      '@cinghie/cookieconsent' => $vendorDir . '/cinghie/yii2-cookie-consent',
+    ),
+  ),
 );

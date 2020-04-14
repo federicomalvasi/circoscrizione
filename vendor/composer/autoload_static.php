@@ -50,7 +50,6 @@ class ComposerStaticInitbca55371a66a2ac72620ec4ff7c086c5
             'kartik\\file\\' => 12,
             'kartik\\dialog\\' => 14,
             'kartik\\datecontrol\\' => 19,
-            'kartik\\date\\' => 12,
             'kartik\\base\\' => 12,
         ),
         'h' => 
@@ -64,6 +63,7 @@ class ComposerStaticInitbca55371a66a2ac72620ec4ff7c086c5
         ),
         'c' => 
         array (
+            'cinghie\\cookieconsent\\' => 22,
             'cebe\\markdown\\' => 14,
         ),
         'W' => 
@@ -189,10 +189,6 @@ class ComposerStaticInitbca55371a66a2ac72620ec4ff7c086c5
         array (
             0 => __DIR__ . '/..' . '/kartik-v/yii2-datecontrol/src',
         ),
-        'kartik\\date\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/kartik-v/yii2-widget-datepicker/src',
-        ),
         'kartik\\base\\' => 
         array (
             0 => __DIR__ . '/..' . '/kartik-v/yii2-krajee-base/src',
@@ -208,6 +204,10 @@ class ComposerStaticInitbca55371a66a2ac72620ec4ff7c086c5
         'dmstr\\' => 
         array (
             0 => __DIR__ . '/..' . '/dmstr/yii2-adminlte-asset',
+        ),
+        'cinghie\\cookieconsent\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cinghie/yii2-cookie-consent',
         ),
         'cebe\\markdown\\' => 
         array (
@@ -516,21 +516,15 @@ class ComposerStaticInitbca55371a66a2ac72620ec4ff7c086c5
         'PHPUnit_Util_ConfigurationGenerator' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/ConfigurationGenerator.php',
         'PHPUnit_Util_ErrorHandler' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/ErrorHandler.php',
         'PHPUnit_Util_Fileloader' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Fileloader.php',
-        'PHPUnit_Util_Filesystem' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Filesystem.php',
         'PHPUnit_Util_Filter' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Filter.php',
         'PHPUnit_Util_Getopt' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Getopt.php',
         'PHPUnit_Util_GlobalState' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/GlobalState.php',
-        'PHPUnit_Util_InvalidArgumentHelper' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/InvalidArgumentHelper.php',
         'PHPUnit_Util_Log_JSON' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Log/JSON.php',
         'PHPUnit_Util_Log_JUnit' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Log/JUnit.php',
         'PHPUnit_Util_Log_TAP' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Log/TAP.php',
         'PHPUnit_Util_Log_TeamCity' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Log/TeamCity.php',
-        'PHPUnit_Util_PHP' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/PHP.php',
         'PHPUnit_Util_PHP_Default' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/PHP/Default.php',
         'PHPUnit_Util_PHP_Windows' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/PHP/Windows.php',
-        'PHPUnit_Util_Printer' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Printer.php',
-        'PHPUnit_Util_Regex' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Regex.php',
-        'PHPUnit_Util_String' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/String.php',
         'PHPUnit_Util_Test' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Test.php',
         'PHPUnit_Util_TestDox_NamePrettifier' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/TestDox/NamePrettifier.php',
         'PHPUnit_Util_TestDox_ResultPrinter' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/TestDox/ResultPrinter.php',
