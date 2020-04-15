@@ -56,7 +56,7 @@ class SiteController extends Controller
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-            ],
+            ]
         ];
     }
 
@@ -152,6 +152,17 @@ class SiteController extends Controller
     	return $this->render('resetPassword', [
     			'model' => $model,
     	]);
+    }
+
+    /**
+     * Displays privacy policy.
+     *
+     * @return string
+     */
+    public function actionPrivacy()
+    {
+        $this->layout = 'main-login';
+        return $this->render('privacy');
     }
 
     

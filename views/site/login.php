@@ -19,7 +19,24 @@ $fieldOptions2 = [
     'options' => ['class' => 'form-group has-feedback'],
     'inputTemplate' => "{input}<span class='glyphicon glyphicon-lock form-control-feedback'></span>"
 ];
+
+$privacyUrl = Url::to(['site/privacy']);
 ?>
+
+    <script>
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#252e39"
+                },
+                "button": {
+                    "background": "#14a7d0"
+                }
+            },
+            "theme": "classic",
+            "type": "opt-out"
+        });
+    </script>
 
 <div class="login-box">
     <div class="login-logo">
@@ -58,9 +75,10 @@ $fieldOptions2 = [
 </div><!-- /.login-box -->
 
 <?= CookieWidget::widget([
-    'message' => 'This website uses cookies to ensure you get the best experience on our website.',
-    'dismiss' => 'Got It',
-    'learnMore' => 'More info',
-    'link' => 'http://silktide.com/privacy-policy',
-    'theme' => 'dark-bottom'
+    'message' => 'ATTENZIONE! Questo sito utilizza i cookie per consentirti la navigazione. Chiudendo questo banner, scorrendo questa pagina, cliccando su un link o proseguendo la navigazione in altra maniera, acconsenti all’uso dei cookie e accetti implicitamente quanto indicato sull&apos;',
+    'dismiss' => 'Accetto',
+    'learnMore' => 'Informativa privacy e cookie',
+    'link' => $privacyUrl,
+    'theme' => 'dark-bottom',
+    'expiryDays' => '15'
 ]); ?>
