@@ -2,10 +2,9 @@
 
 namespace app\models\search;
 
-use Yii;
+use app\models\Oratore;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Oratore;
 
 /**
  * OratoreSearch represents the model behind the search form of `app\models\Oratore`.
@@ -14,6 +13,7 @@ class OratoreSearch extends Oratore
 {
 
     public $schema_id;
+
     /**
      * {@inheritdoc}
      */
@@ -44,39 +44,31 @@ class OratoreSearch extends Oratore
      */
     public function search($params)
     {
+        $this->load($params);
 
-        /*$query = Oratore::find()
-            ->joinWith('congregazione')
-            ->with('schemi')
-            ->orderBy('congregazioni.nome,uomini.cognome,uomini.nome')
-        ;*/
+        $query = null;
+        if ($this->schema_id) {
+            $query = Oratore::find()
+                ->joinWith('congregazione')
+                ->innerJoin('oratori_schemi', "oratori_schemi.oratore_id = uomini.id")
+                ->innerJoin('schemi', "oratori_schemi.schema_id = schemi.id")
+                ->with('schemi')
+                ->orderBy('congregazioni.nome,uomini.cognome,uomini.nome')
+            ;
+        }else {
+            $query = Oratore::find()
+                ->joinWith('congregazione')
+                ->with('schemi')
+                ->orderBy('congregazioni.nome,uomini.cognome,uomini.nome')
+            ;
 
-        $query = Oratore::find()
-            ->joinWith('congregazione')
-            ->innerJoin('oratori_schemi', "oratori_schemi.oratore_id = uomini.id")
-            ->innerJoin('schemi', "oratori_schemi.schema_id = schemi.id")
-            ->with('schemi')
-            ->orderBy('congregazioni.nome,uomini.cognome,uomini.nome')
-        ;
-
+        }
 
         // add conditions that should always apply here
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => ['pageSize' => 50],
         ]);
-
-        /*
-        $dataProvider->sort->attributes['congregazione'] = [
-        		// The tables are the ones our relation are configured to
-        		// in my case they are prefixed with "tbl_"
-        		'asc' => ['congregazioni.nome' => SORT_ASC],
-        		'desc' => ['congregazioni.name' => SORT_DESC],
-        ];
-        */
-        
-        //$dataProvider->sort->defaultOrder = ['congregazioni.nome' => SORT_ASC];
-
-        $this->load($params);
 
         if (!$this->validate()) {
             // uncomment the following line if you do not want to return any records when validation fails
@@ -85,21 +77,31 @@ class OratoreSearch extends Oratore
         }
 
         // grid filtering conditions
-        $query->andFilterWhere([
-            'id' => $this->id,
-            'congregazione_id' => $this->congregazione_id,
-            'pioniere' => $this->pioniere,
-            'oratore' => $this->oratore,
-            'schemi.id' => $this->schema_id,
-        ]);
+        if ($this->schema_id) {
+            $query->andFilterWhere([
+                'id' => $this->id,
+                'congregazione_id' => $this->congregazione_id,
+                'pioniere' => $this->pioniere,
+                'oratore' => $this->oratore,
+                'schemi.id' => $this->schema_id,
+            ]);
+        }else {
+            $query->andFilterWhere([
+                'id' => $this->id,
+                'congregazione_id' => $this->congregazione_id,
+                'pioniere' => $this->pioniere,
+                'oratore' => $this->oratore,
+            ]);
+        }
 
         $query->andFilterWhere(['like', 'nomina', $this->nomina])
-            ->andFilterWhere(['like', 'cognome', $this->cognome])
-            ->andFilterWhere(['like', 'nome', $this->nome])
-            ->andFilterWhere(['like', 'telefono1', $this->telefono1])
+            ->andFilterWhere(['like', 'uomini.cognome', $this->cognome])
+            ->andFilterWhere(['like', 'uomini.nome', $this->nome])
+            ;
+            /*->andFilterWhere(['like', 'telefono1', $this->telefono1])
             ->andFilterWhere(['like', 'telefono2', $this->telefono2])
             ->andFilterWhere(['like', 'email', $this->email])
-            ->andFilterWhere(['like', 'email_jw', $this->email_jw]);
+            ->andFilterWhere(['like', 'email_jw', $this->email_jw])*/
 
         return $dataProvider;
     }
