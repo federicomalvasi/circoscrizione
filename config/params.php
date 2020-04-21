@@ -8,6 +8,6 @@ return [
 	'nomine' => ['A' => 'Anziano', 'SM' => 'SM'],
 	'ruoliOrganigramma' => ['S' => 'Sorvegliante', 'A' => 'Assistente'],
     'ruoliOrganigrammaRO' => ['S' => 'Supraveghetor', 'A' => 'Asistent'],
-    'tipologieAssemblee' => ['CA-CO' => 'con il Sorvegliante di Circoscrizione','CA-BR' => 'con il Rappresentante della Filiale']
-		
+    'tipologieAssemblee' => ['CA-CO' => 'con il Sorvegliante di Circoscrizione','CA-BR' => 'con il Rappresentante della Filiale'],
+    'boolean' => ['0' => 'NO', '1' => 'SI']
 ];

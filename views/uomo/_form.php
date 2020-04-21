@@ -1,9 +1,9 @@
 <?php
 
+use app\models\Congregazione;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use yii\helpers\ArrayHelper;
-use app\models\Congregazione;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Uomo */
@@ -41,12 +41,15 @@ $congregazioniList = ArrayHelper::map(Congregazione::find()->all(),'id','nome');
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-6">
-			<?= $form->field($model, 'telefono1')->textInput(['maxlength' => true]) ?>
-		</div>
-		<div class="col-md-6">
-			<?= $form->field($model, 'telefono2')->textInput(['maxlength' => true]) ?>
-		</div>
+        <div class="col-md-6">
+            <?= $form->field($model, 'telefono1')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col-md-3">
+            <?= $form->field($model, 'telefono2')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col-md-3">
+            <?= $form->field($model, 'anno_nascita')->textInput(['maxlength' => true]) ?>
+        </div>
 	</div>
 	<div class="row">
 		<div class="col-md-6">

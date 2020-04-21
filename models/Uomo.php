@@ -3,8 +3,8 @@
 namespace app\models;
 
 use Yii;
-use yii\behaviors\TimestampBehavior;
 use yii\behaviors\BlameableBehavior;
+use yii\behaviors\TimestampBehavior;
 use yii\db\Expression;
 
 /**
@@ -21,6 +21,7 @@ use yii\db\Expression;
  * @property string $telefono2
  * @property string $email
  * @property string $email_jw
+ * @property int $anno_nascita
  *
  * @property OratoriSchemi[] $oratoriSchemis
  * @property Schemi[] $schemas
@@ -48,6 +49,7 @@ class Uomo extends \yii\db\ActiveRecord
             [['congregazione_id', 'pioniere', 'oratore'], 'integer'],
             [['cognome', 'nome'], 'string', 'max' => 255],
             [['nomina'], 'string', 'max' => 2],
+            [['anno_nascita'], 'string', 'max' => 4],
             [['telefono1', 'telefono2'], 'string', 'max' => 20],
             [['email', 'email_jw'], 'string', 'max' => 100],
         ];

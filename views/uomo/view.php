@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model app\models\Uomo */
 
 $this->title = $model->fullName;
-$this->params['breadcrumbs'][] = ['label' => 'Uomos', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Elenco uomini', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="uomo-view">
@@ -30,11 +30,21 @@ $this->params['breadcrumbs'][] = $this->title;
             'cognome',
             'nome',
             'congregazione.nome',
-            'nomina',
-            'pioniere',
-            'oratore',
+            [
+                'label' => 'Nomina',
+                'value' => Yii::$app->params['nomine'][$model->nomina]
+            ],
+            [
+                'label' => 'Pioniere',
+                'value' => Yii::$app->params['boolean'][$model->pioniere]
+            ],
+            [
+                'label' => 'Oratore',
+                'value' => Yii::$app->params['boolean'][$model->oratore]
+            ],
             'telefono1',
             'telefono2',
+            'anno_nascita',
             'email:email',
             'email_jw:email',
         ],
