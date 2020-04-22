@@ -117,3 +117,46 @@ a.desc:after {
 .text-center {
     text-align: center !important;
 }
+
+.fw-500 {
+    font-weight: 500 !important;
+}
+.fw-600 {
+    font-weight: 600 !important;
+}
+table.organigramma > thead > tr.header,
+table.organigramma > tbody > tr.header-section{
+    background: rgb(29, 68, 80);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+table.organigramma > thead > tr {
+    background: rgb(43, 155, 171);
+}
+
+table.organigramma > tbody > tr {
+    background: #a9d6e3;
+}
+
+table.organigramma > thead > tr.sorv,
+table.organigramma > tbody > tr.sorv {
+    background: #82c2d4;
+}
+
+table.organigramma > thead > tr > th,
+table.organigramma > tbody > tr > td {
+    border-bottom: 0;border-top: 0;
+}
+
+table.organigramma > thead > tr > th > h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px 0px;
+}
+
+table.organigramma  {
+    color: rgb(29, 68, 80);
+}
+

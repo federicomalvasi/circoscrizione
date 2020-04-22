@@ -2,15 +2,15 @@
 
 namespace app\controllers;
 
-use Yii;
+use app\models\Circoscrizione;
 use app\models\Organigramma;
+use app\models\Reparto;
 use app\models\search\OrganigrammaSearch;
+use app\models\Uomo;
+use Yii;
+use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
-use app\models\Reparto;
-use app\models\Circoscrizione;
-use app\models\Uomo;
 
 /**
  * OrganigrammaController implements the CRUD actions for Organigramma model.
@@ -63,12 +63,15 @@ class OrganigrammaController extends Controller
         ->all();
         
         //$reparti = Reparto::find()->orderby('nome ASC')->all();
-        
-        //print_r($organigramma);
-        //die;
+
+        //return $this->render('print', ['organigramma' => $organigramma, 'co_uomo' => $co_uomo, 'sa_uomo' => $sa_uomo, 'asa_uomo' => $asa_uomo]);
+
         $htmlContent = $this->renderPartial('print', ['organigramma' => $organigramma, 'co_uomo' => $co_uomo, 'sa_uomo' => $sa_uomo, 'asa_uomo' => $asa_uomo]);
         $pdf = Yii::$app->pdf;
         $pdf->content = $htmlContent;
+        $pdf->marginLeft = '8';
+        $pdf->marginRight = '8';
+        $pdf->filename = 'organigramma.pdf';
         return $pdf->render();
     
     }
