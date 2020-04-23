@@ -25,7 +25,8 @@ $this->params['breadcrumbs'][] = 'Allegati';
 		'multiple' => true, // If you want to allow multiple upload, default to false
 	],
 	'pluginOptions' => [ // Plugin options of the Kartik's FileInput widget 
-		'maxFileCount' => 10 // Client max files
+		'maxFileCount' => 10, // Client max files
+        //'maxFileSize' => 25600
 	]
 	]) ?>
     

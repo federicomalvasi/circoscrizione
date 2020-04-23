@@ -2,13 +2,13 @@
 
 namespace app\controllers;
 
-use Yii;
 use app\models\Reparto;
 use app\models\search\RepartoSearch;
+use Yii;
+use yii\data\ActiveDataProvider;
+use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
-use yii\data\ActiveDataProvider;
 
 /**
  * RepartoController implements the CRUD actions for Reparto model.
@@ -51,9 +51,11 @@ class RepartoController extends Controller
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
+        $searchModel = new RepartoSearch();
         
         return $this->render('index-modulistica', [
             'dataProvider' => $dataProvider,
+            'searchModel' => $searchModel,
         ]);
     }
 

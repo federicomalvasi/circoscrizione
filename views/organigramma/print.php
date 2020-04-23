@@ -13,8 +13,8 @@
         </tr>
         <tr class="fw-600">
             <th style="<?=$thStyle?>">SARCINĂ</th>
-            <th style="<?=$thStyle?>">NUME</th>
             <th style="<?=$thStyle?>">PRENUME</th>
+            <th style="<?=$thStyle?>">NUME</th>
             <th style="<?=$thStyle?>">B/SA</th>
             <th style="<?=$thStyle?>">CONGREGAȚIE</th>
             <th style="<?=$thStyle?>">EMAIL</th>

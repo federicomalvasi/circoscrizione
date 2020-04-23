@@ -2,13 +2,14 @@
 
 namespace app\controllers;
 
-use Yii;
-use app\models\Uomo;
+use app\models\Account;
+use app\models\OratoreSchema;
 use app\models\search\UomoSearch;
+use app\models\Uomo;
+use Yii;
+use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
-use app\models\Account;
 
 /**
  * UomoController implements the CRUD actions for Uomo model.
@@ -134,6 +135,7 @@ class UomoController extends Controller
     public function actionDelete($id)
     {
         $model = $this->findModel($id);
+        OratoreSchema::deleteAll('oratore_id = '.$id);
         $account_id = $model->account_id; 
         $model->delete();
         Account::findOne($account_id)->delete();
