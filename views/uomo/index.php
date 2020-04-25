@@ -1,9 +1,9 @@
 <?php
 
-use yii\helpers\Html;
+use app\models\Congregazione;
 use yii\grid\GridView;
 use yii\helpers\ArrayHelper;
-use app\models\Congregazione;
+use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\search\UomoSearch */
@@ -84,7 +84,21 @@ $congregazioniList = ArrayHelper::map(Congregazione::find()->all(),'id','nome');
             ],
             //'email_jw:email',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'template' => '{view} {update} {delete}',
+                'buttons' => [
+                    'delete' => function($url, $model){
+                        return Html::a('<span class="glyphicon glyphicon-trash"></span>', ['delete', 'id' => $model->id], [
+                            'class' => '',
+                            'data' => [
+                                'confirm' => 'Sei sicuro di voler eliminare l\'utente? Verranno eliminate tutte le informazioni ad esso collegate. L\'operazione è irreversibile!',
+                                'method' => 'post',
+                            ],
+                        ]);
+                    }
+                ]
+            ],
         ],
     ]); ?>
 </div>

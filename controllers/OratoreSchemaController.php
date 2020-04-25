@@ -2,16 +2,14 @@
 
 namespace app\controllers;
 
-use Yii;
+use app\models\Oratore;
 use app\models\OratoreSchema;
-use app\models\search\OratoreSchema as OratoreSchemaSearch;
+use app\models\search\SchemaSearch;
+use Yii;
+use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
-use app\models\Schema;
-use app\models\search\SchemaSearch;
-use app\models\Oratore;
-use yii\helpers\ArrayHelper;
 
 /**
  * OratoreSchemaController implements the CRUD actions for OratoreSchema model.
@@ -39,10 +37,9 @@ class OratoreSchemaController extends Controller
      */
     public function actionIndex($editMode = null,$oratore_id = null)
     {
-        if(is_null($oratore_id) && $editMode != null && $editMode != 1)
+        if(is_null($oratore_id) && $editMode != 1)
     	   $oratore_id = Yii::$app->user->identity->uomo->id;
-    	
-    	   
+
     	$modelOratore = Oratore::findOne($oratore_id);
         $searchModel = new SchemaSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
@@ -53,7 +50,7 @@ class OratoreSchemaController extends Controller
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         	'modelOratore' => $modelOratore,
-        	'schemi_assegnati' => $schemi_assegnati		
+        	'schemi_assegnati' => $schemi_assegnati
         ]);
     }
 

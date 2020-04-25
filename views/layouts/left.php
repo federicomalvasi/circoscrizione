@@ -26,6 +26,9 @@
                     ['label' => 'Discorsi Pubblici', 'options' => ['class' => 'header'], 'visible' => Yii::$app->user->identity->can('area_oratori')],
                     ['label' => 'Oratori', 'icon' => 'black-tie', 'url' => ['/oratore'], 'visible' => Yii::$app->user->identity->can('area_oratori')],
                     ['label' => 'I miei schemi', 'icon' => 'file-text-o', 'url' => ['/oratore-schema'], 'visible' => Yii::$app->user->identity->can('area_oratori')],
+
+                    ['label' => 'Statistiche', 'options' => ['class' => 'header'], 'visible' => Yii::$app->user->identity->can('area_oratori')],
+                    ['label' => 'Schemi circoscrizione', 'icon' => 'bar-chart', 'url' => ['/schema/circoscrizione'], 'visible' => Yii::$app->user->identity->can('area_oratori')],
                     //['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
          
                     ['label' => 'Amministrazione', 'options' => ['class' => 'header'], 'visible' => Yii::$app->user->identity->isAdmin],

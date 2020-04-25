@@ -1,7 +1,7 @@
 <?php
 
-use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\helpers\Html;
 use yii\helpers\Url;
 
 /* @var $this yii\web\View */
@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
     	
             		<?= $schema->numero . '&nbsp;&nbsp;&nbsp;&nbsp;'?>	
 
-    <?php endforeach; ?>
+                <?php endforeach; ?>
               
               </span>
             </div>

@@ -174,4 +174,13 @@ return array (
       '@cinghie/cookieconsent' => $vendorDir . '/cinghie/yii2-cookie-consent',
     ),
   ),
+  'miloschuman/yii2-highcharts-widget' => 
+  array (
+    'name' => 'miloschuman/yii2-highcharts-widget',
+    'version' => '8.0.0.0',
+    'alias' => 
+    array (
+      '@miloschuman/highcharts' => $vendorDir . '/miloschuman/yii2-highcharts-widget/src',
+    ),
+  ),
 );

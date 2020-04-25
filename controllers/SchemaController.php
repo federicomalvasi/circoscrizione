@@ -2,12 +2,13 @@
 
 namespace app\controllers;
 
-use Yii;
 use app\models\Schema;
 use app\models\search\SchemaSearch;
+use Yii;
+use yii\db\Query;
+use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * SchemaController implements the CRUD actions for Schema model.
@@ -54,6 +55,25 @@ class SchemaController extends Controller
     {
         return $this->render('view', [
             'model' => $this->findModel($id),
+        ]);
+    }
+
+    /**
+     * Vista Statistiche schemi circoscrizione
+     * @return mixed
+     */
+    public function actionCircoscrizione() {
+        $query = new Query();
+
+
+        $query  ->select(['numero, titolo, (select count(*) from oratori_schemi where schema_id = id) as tot'])
+                ->from('schemi')
+                ->orderBy('tot, numero')
+        ;
+        $schemi_circ = $query->all();
+
+        return $this->render('circoscrizione', [
+            'schemi_circ' => $schemi_circ
         ]);
     }
 

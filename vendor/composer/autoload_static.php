@@ -40,6 +40,10 @@ class ComposerStaticInitbca55371a66a2ac72620ec4ff7c086c5
         array (
             'nemmo\\attachments\\' => 18,
         ),
+        'm' => 
+        array (
+            'miloschuman\\highcharts\\' => 23,
+        ),
         'k' => 
         array (
             'kartik\\select2\\' => 15,
@@ -156,6 +160,10 @@ class ComposerStaticInitbca55371a66a2ac72620ec4ff7c086c5
         'nemmo\\attachments\\' => 
         array (
             0 => __DIR__ . '/..' . '/nemmo/yii2-attachments/src',
+        ),
+        'miloschuman\\highcharts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/miloschuman/yii2-highcharts-widget/src',
         ),
         'kartik\\select2\\' => 
         array (
