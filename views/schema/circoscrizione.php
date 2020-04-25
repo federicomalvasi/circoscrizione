@@ -26,8 +26,6 @@ foreach ($schemi_circ as $schema) {
     }
 }
 
-
-
 echo Highcharts::widget([
     'scripts' => [ 'modules/drilldown'],
     'options' => [
@@ -133,12 +131,14 @@ echo Highcharts::widget([
 
 ?>
 
-<table class="table table-striped" style="margin-top: 20px">
+<table class="table table-striped" style="margin-top: 40px">
     <thead>
     <tr style="background-color: #247ba0;color: white;">
         <th scope="col">Numero</th>
         <th scope="col">Titolo</th>
-        <th scope="col">N. fratelli disp</th>
+        <th scope="col">
+            N. fratelli <span class="glyphicon glyphicon-question-sign" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Numero fratelli della circoscrizione che hanno preparato lo schema"></span>
+        </th>
     </tr>
     </thead>
     <tbody>
@@ -182,3 +182,16 @@ echo Highcharts::widget([
     <?php endforeach; ?>
     </tbody>
 </table>
+
+<?php
+
+$js = <<<SCRIPT
+/* To initialize BS3 tooltips set this below */
+$(function () { 
+    $("[data-toggle='tooltip']").tooltip(); 
+});
+SCRIPT;
+$this->registerJs($js);
+
+
+?>

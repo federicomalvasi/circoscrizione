@@ -34,6 +34,7 @@ $this->title = '';
 				<br>
 				<p><h4>Cosa puoi fare?</h4></p>
                 <p><h4> <a href="<?= Url::to(['oratore/index']) ?>"> &raquo; Vedi elenco degli oratori della circoscrizione</a></h4>
+                <p><h4> <a href="<?= Url::to(['schema/circoscrizione']) ?>"> &raquo; Statistiche schemi circoscrizione</a></h4>
 				<p><h4> <a href="<?= Url::to(['oratore-schema/']) ?>"> &raquo; Inserisci i tuoi schemi</a></h4></p>
 				
                 <p></p>	
