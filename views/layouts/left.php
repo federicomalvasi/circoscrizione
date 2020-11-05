@@ -35,7 +35,7 @@
                     ['label' => 'Assemblee', 'icon' => 'leanpub', 'url' => ['/assemblea'],'visible' => Yii::$app->user->identity->isAdmin],
                     ['label' => 'Uomini', 'icon' => 'male', 'url' => ['/uomo'],'visible' => Yii::$app->user->identity->isAdmin],
                     ['label' => 'Reparti', 'icon' => 'th', 'url' => ['/reparto'], 'visible' => Yii::$app->user->identity->isAdmin],
-                    ['label' => 'Modulistica', 'icon' => 'folder-open', 'url' => ['/reparto/index-modulistica'],],
+                    ['label' => 'Modulistica', 'icon' => 'folder-open', 'url' => ['/reparto/index-modulistica'], 'visible' => Yii::$app->user->identity->isAdmin],
                     ['label' => 'Congregazioni', 'icon' => 'home', 'url' => ['/congregazione'], 'visible' => Yii::$app->user->identity->isAdmin],
                     ['label' => 'Circoscrizione', 'icon' => 'circle', 'url' => ['/circoscrizione/setting'], 'visible' => Yii::$app->user->identity->isAdmin],
                     ['label' => 'Schemi', 'icon' => 'files-o', 'url' => ['/schema'], 'visible' => Yii::$app->user->identity->isAdmin],

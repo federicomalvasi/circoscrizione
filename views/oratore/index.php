@@ -1,13 +1,14 @@
 <?php
 
-use app\models\Schema;
-use yii\helpers\Html;
-//use yii\grid\GridView;
-use kartik\grid\GridView;
 use app\models\Congregazione;
-use yii\helpers\ArrayHelper;
-use yii\helpers\Url;
+use app\models\Schema;
+use kartik\grid\GridView;
 use yii\bootstrap\Modal;
+use yii\helpers\ArrayHelper;
+use yii\helpers\Html;
+use yii\helpers\Url;
+
+//use yii\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\search\OratoreSearch */
@@ -17,7 +18,9 @@ $this->title = 'Oratori';
 $this->params['breadcrumbs'][] = $this->title;
 
 $congregazioniList = ArrayHelper::map(Congregazione::find()->all(),'id','nome');
-$schemiList = ArrayHelper::map(Schema::find()->all(), 'id', 'numero')
+$schemiList = ArrayHelper::map(Schema::find()->all(), 'id', function ($model){
+    return $model['numero']."-".$model['titolo'];
+})
 ?>
 <div class="oratore-index">
 
@@ -27,7 +30,9 @@ $schemiList = ArrayHelper::map(Schema::find()->all(), 'id', 'numero')
     <div class="box-header with-border">
         <h3 class="box-title"></h3>
         <div class="box-tools pull-right">
+            <?php if(Yii::$app->user->identity->isAdmin): ?>
             <?= Html::a('<i class="fa fa-plus"></i> Nuovo oratore', ['/uomo/create', 'from' => 'oratore'], ['class' => 'btn btn-success']) ?>
+            <?php endif; ?>
             <?= Html::a('<i class="fa fa-print"></i> Stampa elenco', ['print'], ['class' => 'btn btn-primary', 'target' => '_blank']) ?>
         </div><!-- /.box-tools -->
     </div><!-- /.box-header -->
