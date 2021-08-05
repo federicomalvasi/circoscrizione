@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'adminEmail' => 'admin@example.com',
-	'supportEmail' => 'noreply@circuitrom11a.eu',
+    'adminEmail' => 'admin@circuitrom11.com',
+	'supportEmail' => 'noreply@circuitrom11.eu',
 	'user.passwordResetTokenExpire' => 259200,
 	'congregazioniTipologie' => ['C' => 'Congregazione', 'G' => 'Gruppo', 'P' => 'Pregruppo'],
 	'nomine' => ['A' => 'Anziano', 'SM' => 'SM'],
