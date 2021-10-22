@@ -115,7 +115,7 @@
             "version": "v3.3.7",
             "source": {
                 "type": "git",
-                "url": "git@github.com:twbs/bootstrap.git",
+                "url": "https://github.com/twbs/bootstrap.git",
                 "reference": "0b9c4a4007c44201dce9a6cc1a38407005c26c86"
             },
             "dist": {
@@ -136,12 +136,12 @@
             "version": "2.0.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:insites/cookieconsent.git",
+                "url": "https://github.com/osano/cookieconsent.git",
                 "reference": "973eb0a951de60d403ccc7107796cec06964af00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/insites/cookieconsent/zipball/973eb0a951de60d403ccc7107796cec06964af00",
+                "url": "https://api.github.com/repos/osano/cookieconsent/zipball/973eb0a951de60d403ccc7107796cec06964af00",
                 "reference": "973eb0a951de60d403ccc7107796cec06964af00"
             },
             "type": "bower-asset",
@@ -154,7 +154,7 @@
             "version": "v8.0.4",
             "source": {
                 "type": "git",
-                "url": "git@github.com:highcharts/highcharts-dist.git",
+                "url": "https://github.com/highcharts/highcharts-dist.git",
                 "reference": "a6aec8be5b7be3531e7c2cd1dc80a1bea52adbba"
             },
             "dist": {
@@ -172,7 +172,7 @@
             "version": "3.3.11",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RobinHerbots/Inputmask.git",
+                "url": "git@github.com:RobinHerbots/Inputmask.git",
                 "reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
             },
             "dist": {
@@ -193,7 +193,7 @@
             "version": "3.2.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jquery/jquery-dist.git",
+                "url": "git@github.com:jquery/jquery-dist.git",
                 "reference": "77d2a51d0520d2ee44173afdf4e40a9201f5964e"
             },
             "dist": {
@@ -211,7 +211,7 @@
             "version": "1.6.4",
             "source": {
                 "type": "git",
-                "url": "git@github.com:jackmoore/colorbox.git",
+                "url": "https://github.com/jackmoore/colorbox.git",
                 "reference": "bac78120c6ca9e63370cc317ab6f400129cd6608"
             },
             "dist": {
@@ -229,7 +229,7 @@
             "version": "v1.3.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/bestiejs/punycode.js.git",
+                "url": "git@github.com:bestiejs/punycode.js.git",
                 "reference": "38c8d3131a82567bfef18da09f7f4db68c84f8a3"
             },
             "dist": {
@@ -835,12 +835,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-datecontrol.git",
-                "reference": "0e7057f644fb178c9a949836c2b0dc7325d07e02"
+                "reference": "83abdbe6e6f7b52a705e4649fae027a80670c04a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-datecontrol/zipball/0e7057f644fb178c9a949836c2b0dc7325d07e02",
-                "reference": "0e7057f644fb178c9a949836c2b0dc7325d07e02",
+                "url": "https://api.github.com/repos/kartik-v/yii2-datecontrol/zipball/83abdbe6e6f7b52a705e4649fae027a80670c04a",
+                "reference": "83abdbe6e6f7b52a705e4649fae027a80670c04a",
                 "shasum": ""
             },
             "require": {
@@ -879,7 +879,7 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2020-02-03T06:37:57+00:00"
+            "time": "2021-06-12T11:11:36+00:00"
         },
         {
             "name": "kartik-v/yii2-dialog",
@@ -1359,13 +1359,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Nemmo/yii2-attachments.git",
-                "reference": "6d1dea5673b30e8d5f024bf101446da0f0b52483"
+                "url": "https://github.com/CTOlet/yii2-attachments.git",
+                "reference": "ae041ad9b4b0e9fbc3a499d51d99f45b0b42eb37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Nemmo/yii2-attachments/zipball/6d1dea5673b30e8d5f024bf101446da0f0b52483",
-                "reference": "6d1dea5673b30e8d5f024bf101446da0f0b52483",
+                "url": "https://api.github.com/repos/CTOlet/yii2-attachments/zipball/ae041ad9b4b0e9fbc3a499d51d99f45b0b42eb37",
+                "reference": "ae041ad9b4b0e9fbc3a499d51d99f45b0b42eb37",
                 "shasum": ""
             },
             "require": {
@@ -1411,7 +1411,7 @@
                 "upload",
                 "yii2"
             ],
-            "time": "2018-03-26T10:10:21+00:00"
+            "time": "2020-09-26T20:35:48+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -1666,16 +1666,16 @@
         },
         {
             "name": "tinymce/tinymce",
-            "version": "4.8.5",
+            "version": "5.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tinymce/tinymce-dist.git",
-                "reference": "68af6df530cf2a72b461bf8778a8ba7c6a0da19f"
+                "reference": "dbd8fefb0bbe96ed15f9af4518b078ae2c20e020"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/68af6df530cf2a72b461bf8778a8ba7c6a0da19f",
-                "reference": "68af6df530cf2a72b461bf8778a8ba7c6a0da19f",
+                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/dbd8fefb0bbe96ed15f9af4518b078ae2c20e020",
+                "reference": "dbd8fefb0bbe96ed15f9af4518b078ae2c20e020",
                 "shasum": ""
             },
             "type": "component",
@@ -1684,13 +1684,15 @@
                     "scripts": [
                         "tinymce.js",
                         "plugins/*/plugin.js",
-                        "themes/*/theme.js"
+                        "themes/*/theme.js",
+                        "themes/*/icons.js"
                     ],
                     "files": [
                         "tinymce.min.js",
                         "plugins/*/plugin.min.js",
                         "themes/*/theme.min.js",
-                        "skins/**"
+                        "skins/**",
+                        "icons/*/icons.min.js"
                     ]
                 }
             },
@@ -1699,16 +1701,22 @@
                 "LGPL-2.1-only"
             ],
             "description": "Web based JavaScript HTML WYSIWYG editor control.",
-            "homepage": "http://www.tinymce.com",
+            "homepage": "https://www.tiny.cloud/",
             "keywords": [
-                "editor",
+                "contenteditable",
+                "editing",
                 "html",
                 "javascript",
+                "rich editor",
+                "rich text",
+                "rich text editor",
                 "richtext",
+                "rte",
+                "text",
                 "tinymce",
                 "wysiwyg"
             ],
-            "time": "2018-10-31T07:57:27+00:00"
+            "time": "2021-10-11T03:18:15+00:00"
         },
         {
             "name": "yiisoft/yii2",
@@ -2398,6 +2406,7 @@
                 "faker",
                 "fixtures"
             ],
+            "abandoned": true,
             "time": "2018-07-12T10:23:15+00:00"
         },
         {
@@ -2959,6 +2968,7 @@
             "keywords": [
                 "tokenizer"
             ],
+            "abandoned": true,
             "time": "2017-12-04T08:55:13+00:00"
         },
         {
@@ -4251,12 +4261,12 @@
             "version": "1.3.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "0df1908962e7a3071564e857d86874dad1ef204a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/0df1908962e7a3071564e857d86874dad1ef204a",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/0df1908962e7a3071564e857d86874dad1ef204a",
                 "reference": "0df1908962e7a3071564e857d86874dad1ef204a",
                 "shasum": ""
             },
